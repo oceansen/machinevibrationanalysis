@@ -6,6 +6,11 @@ import plotly.graph_objects as go
 from datetime import datetime
 import re
 from typing import Tuple, Optional, Dict, List
+import os
+
+home = os.environ.get("STREAMLIT_HOME") or os.path.expanduser("~/.streamlit")
+os.environ["STREAMLIT_HOME"] = home
+os.makedirs(home, exist_ok=True)
 
 # --------------------------------------------------
 # Page setup
